@@ -12,6 +12,7 @@ elif [ "$last_char" == "d" ]; then
 elif [ "$last_char" == "f" ]; then
     export NZONE="${ZONE%?}b"
 fi
+
 gcloud compute firewall-rules create app-allow-http --network my-internal-app --action allow --direction INGRESS --target-tags lb-backend --source-ranges 0.0.0.0/0 --rules tcp:80
 
 gcloud compute firewall-rules create app-allow-health-check --network default --action allow --direction INGRESS --target-tags lb-backend --source-ranges 130.211.0.0/22,35.191.0.0/16 --rules tcp
