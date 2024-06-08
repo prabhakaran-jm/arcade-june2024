@@ -1,5 +1,10 @@
 #!/bin/bash
 
+gcloud config set compute/zone "us-west1-c"
+export ZONE=$(gcloud config get compute/zone)
+
+gcloud config set compute/region "us-west1"
+export REGION=$(gcloud config get compute/region)
 
 
 gcloud services enable compute.googleapis.com
