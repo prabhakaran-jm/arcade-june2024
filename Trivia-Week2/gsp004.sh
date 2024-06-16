@@ -8,6 +8,8 @@ gcloud compute instances attach-disk gcelab --disk mydisk --zone $ZONE
 
 gcloud compute ssh gcelab --zone $ZONE --quiet
 
+sleep 30
+
 sudo mkdir /mnt/mydisk
 
 sudo mkfs.ext4 -F -E lazy_itable_init=0,lazy_journal_init=0,discard /dev/disk/by-id/scsi-0Google_PersistentDisk_persistent-disk-1
