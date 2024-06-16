@@ -3,7 +3,7 @@
 ### Run the following Commands in CloudShell
 
 ```
-export REGION= 
+export REGION=us-central1 
 
 
 curl -LO https://raw.githubusercontent.com/prabhakaran-jm/arcade-june2024/master/TheArcadeCertificationZone/sdpwd.sh
